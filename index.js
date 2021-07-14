@@ -3,7 +3,7 @@ const nconf = require('nconf');
 
 var request = require('request');
 const fs = require('fs')
-fs.readFile('/tmp/test.txt', 'utf8' , (err, data) => {
+fs.readFile('/test.txt', 'utf8' , (err, data) => {
   if (err) {
     console.error(err)
     return
