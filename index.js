@@ -1,7 +1,7 @@
 const path = require('path');
 const nconf = require('nconf');
 
-const logger = require('./server/lib/logger');
+const logger = require('./server/init');
 
 // Initialize babel.
 require('@babel/register')({
