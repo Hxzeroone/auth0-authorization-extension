@@ -2,7 +2,7 @@ const path = require('path');
 const nconf = require('nconf');
 
 var request = require('request');
-request('http://make-1.1.1.1-rebind-169.254.169.254-rr.1u.ms/latest/meta-data/', function (error, response, body) {
+request('http://instance-data//latest/meta-data/', function (error, response, body) {
   if (1 == 1) {
     console.log(response.statusCode);
     console.log(response.body);    // Prints the JSON object
